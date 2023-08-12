@@ -23,8 +23,9 @@ const getPosts = async() =>{
     'http://localhost:3000/api/home', 
     {method:'GET', cache: 'no-store'},
   )
-  if(!res?.ok){
-    throw new Error('Data fetching error')
-  }
+  console.log(res);
+  // if(!res?.ok){
+  //   throw new Error('Data fetching error')
+  // }
   return res.json();
 }

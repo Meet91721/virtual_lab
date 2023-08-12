@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 export async function GET(request){
     const id = request.nextUrl.pathname.split('/')[3]
-    const experiment = await prisma.experiments.findUnique({
+    const experiment = await prisma.experiment.findUnique({
         where: {
             id: id
         }

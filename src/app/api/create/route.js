@@ -16,7 +16,7 @@ export async function POST(request) {
         return new NextResponse.badRequest('Missing fields', { status: 400 });
     }
     
-    const experiment = await prisma.experiments.create({
+    const experiment = await prisma.experiment.create({
         data: {
             title,
             theory,

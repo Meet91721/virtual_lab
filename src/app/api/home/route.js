@@ -2,7 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
 export async function GET(){
-    const exper = await prisma.experiments.findMany(
+    const exper = await prisma.experiment.findMany(
         {   
             take: 5,
             select: {
